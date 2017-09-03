@@ -18,10 +18,6 @@ export class AppComponent {
    gravar(a: Aluno): void {
      this.alunoService.gravar(a);
      this.alunos.push(a);
-<<<<<<< HEAD
      this.aluno = {nome: "", cpf: "", email: "", login_Github: ""};
-=======
-     this.aluno = {nome: "", cpf: "", email: ""};
->>>>>>> fd52d3e (visualizacao da lista de alunos cadastrados)
   }
 }
