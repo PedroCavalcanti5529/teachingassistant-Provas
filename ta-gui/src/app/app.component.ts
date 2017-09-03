@@ -10,13 +10,14 @@ import { AlunoService } from './aluno.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-
 export class AppComponent {
-  aluno: Aluno = {nome: "", cpf: "", email: "", login_Github: ""};
-  alunoService = new AlunoService();
+   aluno: Aluno = {nome: "", cpf: "", email: "", login_Github: ""};
+   alunoService = new AlunoService();
+   alunos: Aluno[] = [];
 
-  gravar(a: Aluno): void {
-    this.alunoService.gravar(a);
-    this.aluno = {nome: "", cpf: "", email: "", login_Github: ""};
+   gravar(a: Aluno): void {
+     this.alunoService.gravar(a);
+     this.alunos.push(a);
+     this.aluno = {nome: "", cpf: "", email: "", login_Github: ""};
   }
 }
