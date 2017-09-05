@@ -22,17 +22,13 @@ export class Aluno {
     aluno.nome = this.nome;
     aluno.cpf = this.cpf;
     aluno.email = this.email;
-    aluno.email = this.login_Github;
+    aluno.login_Github = this.login_Github;
     aluno.metas = this.cloneMetas();
     return aluno;
   }
 
   cloneMetas(): Map<string,string> {
-    var metas: Map<string,string> = new Map<string,string>();
-    for (let key in this.metas) {
-      metas.set(key[0],key[1]);
-    }
-    return metas;
+    return new Map(this.metas);
   }
 
   //could use: return new Map(this.metas);

@@ -30,16 +30,4 @@ export class AppComponent {
       this.cpfduplicado = false;
    }
 
-   atualizarAluno(aluno: Aluno): void {
-      this.alunoService.atualizar(aluno);
-   }
-
-   getMeta(a: Aluno, chave: string): string {
-      return a.metas.get(chave) || '';
-   }
-
-   setMeta(a: Aluno, chave: string, valor: string): void {
-      a.metas.set(chave, valor);
-   }
-
 }
